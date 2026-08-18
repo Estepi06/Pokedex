@@ -1,0 +1,158 @@
+/* Reset general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #121212);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #ffde00;
+    text-shadow: 3px 3px 0px #3b4cca, -2px -2px 0px #000;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* Buscador alineado horizontalmente */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#pokemonInput {
+    padding: 12px 18px;
+    border-radius: 25px 0 0 25px;
+    border: 3px solid #ffde00;
+    border-right: none;
+    outline: none;
+    font-size: 1rem;
+    width: 300px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+#btnBuscar {
+    padding: 12px 20px;
+    border-radius: 0 25px 25px 0;
+    border: 3px solid #ffde00;
+    background-color: #dc0a2d;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#btnBuscar:hover {
+    background-color: #ff1c3f;
+}
+
+/* Carcasa de la Pokédex */
+.tarjeta-pokedex {
+    background: #dc0a2d;
+    width: 300px;
+    margin-top: 10px;
+    padding: 25px 20px;
+    border-radius: 20px;
+    border: 5px solid #8b0000;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Luz azul de adorno superior */
+.tarjeta-pokedex::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at 30% 30%, #00f0ff, #006699);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00f0ff;
+}
+
+.numero {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffde00;
+    margin-bottom: 5px;
+}
+
+.nombre {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Pantalla del Pokémon */
+.pantalla-img {
+    background: #dedede;
+    border: 4px solid #222;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pantalla-img img {
+    width: 130px;
+    height: 130px;
+}
+
+/* Panel de información */
+.info {
+    background-color: #232323;
+    border: 3px solid #111;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info p {
+    margin-bottom: 6px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+}
+
+.info p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.badge {
+    background-color: #ffde00;
+    color: #111;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
