@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos - Consumo de API</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="galeria.png">
+</head>
+<body>
+    
+    <div class="app-container">
+        <header>
+            <h1 class="glow-title">Galería de Fotos</h1>
+        </header>
+
+        <main id="gallery" class="gallery-container">
+            <div id="status-message" class="loading-state">
+                <div class="spinner"></div>
+                <p>Cargando galería de fotos...</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="api.js"></script>
+    <script src="galeria.js"></script>
+    
+</body>
+</html>
